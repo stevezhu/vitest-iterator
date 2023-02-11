@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Additional vitest matchers for iterators and generators",
   "keywords": [
-    "vitest"
+    "vitest",
+    "generator",
+    "iterator"
   ],
   "repository": {
     "type": "git",
