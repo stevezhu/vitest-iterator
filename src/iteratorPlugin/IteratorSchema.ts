@@ -1,19 +1,26 @@
 import { TSchema, Type } from '@sinclair/typebox';
 import { TypeCompiler } from '@sinclair/typebox/compiler';
 
-const IteratorYieldResultSchema = <TYield extends TSchema>(value: TYield) =>
+export const IteratorYieldResultSchema = <TYield extends TSchema>(
+  value: TYield
+) =>
   Type.Object({
     done: Type.Optional(Type.Literal(false)),
     value,
   });
 
-const IteratorReturnResultSchema = <TReturn extends TSchema>(value: TReturn) =>
+export const IteratorReturnResultSchema = <TReturn extends TSchema>(
+  value: TReturn
+) =>
   Type.Object({
     done: Type.Literal(true),
     value,
   });
 
-const IteratorResultSchema = <T extends TSchema, TReturn extends TSchema>(
+export const IteratorResultSchema = <
+  T extends TSchema,
+  TReturn extends TSchema
+>(
   yieldValue: T,
   returnValue: TReturn
 ) =>
@@ -26,7 +33,7 @@ export const iteratorResultChecker = TypeCompiler.Compile(
   IteratorResultSchema(Type.Unknown(), Type.Unknown())
 );
 
-const IteratorSchema = <T extends TSchema, TReturn extends TSchema>(
+export const IteratorSchema = <T extends TSchema, TReturn extends TSchema>(
   yieldValue: T,
   returnValue: TReturn
 ) =>
