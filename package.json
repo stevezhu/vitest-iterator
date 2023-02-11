@@ -1,0 +1,47 @@
+{
+  "name": "vitest-iterator",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "vitest"
+  ],
+  "license": "MIT",
+  "author": "Steve Zhu <st.zhu1@gmail.com>",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm",
+    "format": "prettier --w .",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.25.21"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "@vitest/ui": "^0.28.4",
+    "chai": ">=4",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-packagejson": "^2.4.2",
+    "prettier-plugin-tsconfig": "^0.0.1",
+    "tsup": "^6.6.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
+  },
+  "peerDependencies": {
+    "chai": ">=4"
+  },
+  "engines": {
+    "node": ">=18.14.0"
+  }
+}
