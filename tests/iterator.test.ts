@@ -14,6 +14,12 @@ describe.each(['next', 'yields'] as const)('.%s', (name) => {
     expect(iter)[name].toBe(2);
     expect(iter)[name].toBeUndefined();
   });
+
+  test('throws error if input is not Iterator', () => {
+    expect(() => {
+      expect(1).next;
+    }).toThrowError();
+  });
 });
 
 describe('.toBeDone()', () => {
@@ -44,5 +50,11 @@ describe('.toBeDone()', () => {
     expect(iter).next.toBe(1);
     expect(iter).next.toBe(2);
     expect(iter.next()).toBeDone();
+  });
+
+  test('throws error if input is not IteratorResult', () => {
+    expect(() => {
+      expect(1).toBeDone();
+    }).toThrowError();
   });
 });
