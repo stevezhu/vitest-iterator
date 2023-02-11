@@ -1,2 +1,2 @@
 scripts:
-  build: tsup src/index.ts --format cjs,esm --dts --external vitest
+  build: tsup
