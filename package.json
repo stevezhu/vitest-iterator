@@ -34,7 +34,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.25.21"
+    "@sinclair/typebox": "^0.25.21",
+    "chai": ">=4"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
@@ -42,7 +43,6 @@
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "@vitest/ui": "^0.28.4",
-    "chai": ">=4",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
@@ -54,9 +54,6 @@
     "tsup": "^6.6.0",
     "typescript": "^4.9.5",
     "vitest": "^0.28.4"
-  },
-  "peerDependencies": {
-    "chai": ">=4"
   },
   "engines": {
     "node": ">=18.14.0"
