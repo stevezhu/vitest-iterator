@@ -28,6 +28,14 @@ export default defineConfig({
 });
 ```
 
+## TypeScript
+
+Add a `.d.ts` file with the following triple-slash directive:
+
+```typescript
+/// <reference types="vitest-iterator/assertion" />
+```
+
 ## Usage
 
 ```typescript
