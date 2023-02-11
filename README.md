@@ -51,14 +51,8 @@ Alternatively, add a `types` entry in `compilerOptions`:
 ## Usage
 
 ```typescript
-function* exampleGenerator() {
-  for (let i = 0; i < 3; i++) {
-    yield i;
-  }
-}
-
-test('name', () => {
-  const iterator = exampleGenerator();
+test('counts to three', () => {
+  const iterator = [0, 1, 2].values();
   expect(iterator).next.toBe(0);
   expect(iterator).next.toBe(1);
   expect(iterator).next.toBe(2);
@@ -66,20 +60,28 @@ test('name', () => {
 });
 ```
 
-`.toBeDone()` can also be used on `IteratorResult` directly.
+`.toBeDone()` can be used on `IteratorResult` directly.
 
 ```typescript
-function* exampleGenerator() {
-  for (let i = 0; i < 3; i++) {
-    yield i;
-  }
-}
-
-test('name', () => {
-  const iterator = exampleGenerator();
+test('counts', () => {
+  const iterator = [1, 2, 3].values();
   const result = iterator.next();
   expect(result).toHaveProperty('value', 0);
   expect(result).not.toBeDone();
+});
+```
+
+This can be used to test generators as well since they implement the iterator protocol.
+
+```typescript
+function* exampleGenerator() {
+  yield 1;
+}
+
+test('testing generator', () => {
+  const iterator = exampleGenerator();
+  expect(iterator).next.toBe(1);
+  expect(iterator).next.toBeDone();
 });
 ```
 
