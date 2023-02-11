@@ -40,5 +40,9 @@ describe('.toBeDone()', () => {
     const result = iter.next();
     expect(result).toHaveProperty('value', 0);
     expect(result).not.toBeDone();
+
+    expect(iter).next.toBe(1);
+    expect(iter).next.toBe(2);
+    expect(iter.next()).toBeDone();
   });
 });
