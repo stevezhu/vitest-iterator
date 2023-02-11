@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "isolatedModules": true,
     "module": "esnext",
     "outDir": "dist/",
     "target": "esnext",
