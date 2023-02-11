@@ -11,7 +11,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['.eslintrc.cjs', '*.config.*', 'package-scripts.js'],
+      files: ['.eslintrc.cjs', '*.config.*'],
       env: {
         node: true,
       },
