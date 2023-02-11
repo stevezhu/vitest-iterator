@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   lint:
@@ -18,7 +18,7 @@ jobs:
           node-version: 18
           cache: 'pnpm'
       - run: pnpm i
-      - run: pnpm test
+      - run: pnpm lint
   test:
     runs-on: ubuntu-latest
     steps:
@@ -30,4 +30,4 @@ jobs:
           node-version: 18
           cache: 'pnpm'
       - run: pnpm i
-      - run: pnpm lint
+      - run: pnpm test
