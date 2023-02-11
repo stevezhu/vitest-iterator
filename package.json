@@ -31,9 +31,9 @@
     "lint": "eslint .",
     "prepare": "nps build",
     "test": "vitest run",
+    "test:coverage": "vitest --coverage",
     "test:ui": "vitest --ui",
-    "test:watch": "vitest",
-    "test:coverage": "vitest --coverage"
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.25.21"
@@ -60,6 +60,7 @@
   "peerDependencies": {
     "vitest": ">=0.27"
   },
+  "packageManager": "pnpm@7.27.0",
   "engines": {
     "node": ">=18.14.0"
   }
