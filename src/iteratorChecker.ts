@@ -22,7 +22,7 @@ const IteratorResultSchema = <T extends TSchema, TReturn extends TSchema>(
     IteratorReturnResultSchema(returnValue),
   ]);
 
-export const IteratorResultChecker = TypeCompiler.Compile(
+export const iteratorResultChecker = TypeCompiler.Compile(
   IteratorResultSchema(Type.Unknown(), Type.Unknown())
 );
 
@@ -43,6 +43,6 @@ const IteratorSchema = <T extends TSchema, TReturn extends TSchema>(
     ),
   });
 
-export const IteratorChecker = TypeCompiler.Compile(
+export const iteratorChecker = TypeCompiler.Compile(
   IteratorSchema(Type.Unknown(), Type.Unknown())
 );

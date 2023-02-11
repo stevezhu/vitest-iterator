@@ -1,12 +1,12 @@
 import chai from 'chai';
 
-import { IteratorChecker, IteratorResultChecker } from './IteratorChecker';
+import { iteratorChecker, iteratorResultChecker } from './iteratorChecker';
 
 function createNextLanguageChain(utils: Chai.ChaiUtils, fnName: string) {
   return function (this: Chai.AssertionStatic) {
     const obj: unknown = utils.flag(this, 'object');
 
-    if (!IteratorChecker.Check(obj)) {
+    if (!iteratorChecker.Check(obj)) {
       throw new TypeError(
         `You must provide an Iterator to expect() when using .${fnName}, not '${typeof obj}'.`
       );
@@ -22,7 +22,7 @@ function createNextLanguageChain(utils: Chai.ChaiUtils, fnName: string) {
 function createToBeDoneMatcher(utils: Chai.ChaiUtils, fnName: string) {
   function getIteratorResultObj(context: object) {
     const obj: unknown = utils.flag(context, 'object');
-    if (IteratorResultChecker.Check(obj)) {
+    if (iteratorResultChecker.Check(obj)) {
       return obj;
     }
   }
