@@ -5,6 +5,10 @@
   "keywords": [
     "vitest"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevezhu/vitest-iterator.git"
+  },
   "license": "MIT",
   "author": "Steve Zhu <st.zhu1@gmail.com>",
   "exports": {
@@ -17,10 +21,14 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "nps build",
     "format": "prettier --w .",
     "lint": "eslint .",
+    "prepare": "nps build",
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:watch": "vitest"
@@ -39,6 +47,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "nps": "^5.10.0",
     "prettier": "^2.8.4",
     "prettier-plugin-packagejson": "^2.4.2",
     "prettier-plugin-tsconfig": "^0.0.1",
