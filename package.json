@@ -32,8 +32,9 @@
     "format": "nps prettier",
     "lint": "concurrently 'nps prettier' 'nps eslint'",
     "prepare": "nps build",
-    "test": "vitest run",
+    "test": "concurrently 'vitest run' 'vitest typecheck --run'",
     "test:coverage": "vitest --coverage",
+    "test:typecheck": "vitest typecheck",
     "test:ui": "vitest --ui",
     "test:watch": "vitest"
   },

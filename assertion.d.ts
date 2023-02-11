@@ -1,8 +1,10 @@
-declare namespace Chai {
-  interface Assertion {
-    next: Assertion;
-    yields: Assertion;
+type IteratorValue<I> = I extends Iterator<infer T> ? T : never;
 
-    toBeDone: (this: Assertion) => void;
+declare namespace Vi {
+  interface Assertion<T> {
+    next: Assertion<IteratorValue<T>>;
+    yields: Assertion<IteratorValue<T>>;
+
+    toBeDone: (this: Assertion<T>) => void;
   }
 }
