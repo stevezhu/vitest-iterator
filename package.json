@@ -36,7 +36,7 @@
     "format": "nps prettier.fix",
     "lint": "concurrently 'nps prettier' 'nps eslint'",
     "prepare": "nps build",
-    "test": "concurrently 'vitest run' 'vitest typecheck --run'",
+    "test": "concurrently 'vitest run' 'vitest typecheck --run' 'tsc --noEmit'",
     "test:coverage": "vitest --coverage",
     "test:typecheck": "vitest typecheck",
     "test:ui": "vitest --ui",
