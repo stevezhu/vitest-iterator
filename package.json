@@ -1,6 +1,6 @@
 {
   "name": "vitest-iterator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Additional vitest matchers for iterators and generators",
   "keywords": [
     "vitest",
