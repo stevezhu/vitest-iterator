@@ -67,7 +67,7 @@
   "peerDependencies": {
     "vitest": ">=0.27"
   },
-  "packageManager": "pnpm@7.29.3",
+  "packageManager": "pnpm@7.31.0",
   "engines": {
     "node": ">=16"
   }
