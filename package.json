@@ -34,9 +34,9 @@
   "scripts": {
     "build": "nps build",
     "format": "nps prettier.fix",
-    "lint": "concurrently 'nps prettier' 'nps eslint'",
+    "lint": "nps lint",
     "prepare": "nps build",
-    "test": "concurrently 'vitest run' 'vitest typecheck --run' 'tsc --noEmit'",
+    "test": "nps test",
     "test:coverage": "vitest --coverage",
     "test:typecheck": "vitest typecheck",
     "test:ui": "vitest --ui",
@@ -58,14 +58,15 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "nps": "^5.10.0",
+    "nps-utils": "^1.7.0",
     "prettier": "^2.8.4",
     "prettier-plugin-packagejson": "^2.4.3",
     "prettier-plugin-tsconfig": "^0.0.1",
     "tsup": "^6.6.3",
-    "typescript": "^5.0.0"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
-    "vitest": ">=0.27"
+    "vitest": ">=0.31.0"
   },
   "packageManager": "pnpm@8.6.7",
   "engines": {

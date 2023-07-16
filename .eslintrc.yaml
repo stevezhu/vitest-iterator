@@ -12,11 +12,14 @@ rules:
   simple-import-sort/imports: error
   simple-import-sort/exports: error
 overrides:
-  - files: [.eslintrc.cjs, '*.config.*']
+  - files: [.eslintrc.cjs, '*.config.*', package-scripts.cjs]
     env:
       node: true
+      es6: true
   - files: '*.{ts,tsx}'
-    extends: 'plugin:@typescript-eslint/recommended'
+    extends:
+      - 'plugin:@typescript-eslint/strict-type-checked'
+      - 'plugin:@typescript-eslint/stylistic-type-checked'
     plugins:
       - '@typescript-eslint'
     parser: '@typescript-eslint/parser'

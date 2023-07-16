@@ -11,7 +11,8 @@ export function createNext(utils: Chai.ChaiUtils, fnName: string) {
       );
     }
 
-    const result = obj.next();
+    const iterator: Iterator<unknown> = obj;
+    const result = iterator.next();
     utils.flag(this, 'object', result.value);
     utils.flag(this, 'iteratorResult', result);
     return this;
