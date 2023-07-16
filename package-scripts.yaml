@@ -1,8 +1,0 @@
-scripts:
-  build: tsup
-  prettier:
-    default: prettier --check .
-    fix: prettier --write .
-  eslint:
-    default: eslint .
-    fix: eslint --fix .
