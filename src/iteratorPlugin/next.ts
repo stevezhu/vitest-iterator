@@ -7,7 +7,7 @@ export function createNext(utils: Chai.ChaiUtils, fnName: string) {
 
     if (!iteratorChecker.Check(obj)) {
       throw new TypeError(
-        `You must provide an Iterator to expect() when using .${fnName}, not '${typeof obj}'.`
+        `You must provide an Iterator to expect() when using .${fnName}, not '${typeof obj}'.`,
       );
     }
 

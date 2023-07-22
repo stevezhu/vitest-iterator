@@ -5,17 +5,17 @@ export const iteratorPlugin: Chai.ChaiPlugin = (chai, utils) => {
   utils.addProperty(
     chai.Assertion.prototype,
     'next',
-    createNext(utils, 'next')
+    createNext(utils, 'next'),
   );
   utils.addProperty(
     chai.Assertion.prototype,
     'yields',
-    createNext(utils, 'yields')
+    createNext(utils, 'yields'),
   );
 
   utils.addMethod(
     chai.Assertion.prototype,
     'toBeDone',
-    createToBeDone(utils, 'toBeDone')
+    createToBeDone(utils, 'toBeDone'),
   );
 };
