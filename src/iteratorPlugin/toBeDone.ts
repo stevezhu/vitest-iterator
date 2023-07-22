@@ -2,7 +2,7 @@ import { iteratorResultChecker } from './IteratorSchema';
 
 export function createToBeDone(utils: Chai.ChaiUtils, fnName: string) {
   const getIteratorResultObj = (
-    context: object
+    context: object,
   ): IteratorResult<unknown> | undefined => {
     const iteratorResult: unknown = utils.flag(context, 'iteratorResult');
     if (iteratorResultChecker.Check(iteratorResult)) {
@@ -18,7 +18,7 @@ export function createToBeDone(utils: Chai.ChaiUtils, fnName: string) {
     const iteratorResult = getIteratorResultObj(this);
     if (!iteratorResult) {
       throw new TypeError(
-        `You must use .${fnName}() after .next, eg. expect().next.toBeDone()`
+        `You must use .${fnName}() after .next, eg. expect().next.toBeDone()`,
       );
     }
     this.assert(
@@ -26,7 +26,7 @@ export function createToBeDone(utils: Chai.ChaiUtils, fnName: string) {
       `expected iterator to be done`,
       `expected iterator to not be done`,
       iteratorResult,
-      { ...iteratorResult, done: true }
+      { ...iteratorResult, done: true },
     );
   };
 }

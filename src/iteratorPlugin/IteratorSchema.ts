@@ -2,7 +2,7 @@ import { TSchema, Type } from '@sinclair/typebox';
 import { TypeCompiler } from '@sinclair/typebox/compiler';
 
 export const IteratorYieldResultSchema = <TYield extends TSchema>(
-  value: TYield
+  value: TYield,
 ) =>
   Type.Object({
     done: Type.Optional(Type.Literal(false)),
@@ -10,7 +10,7 @@ export const IteratorYieldResultSchema = <TYield extends TSchema>(
   });
 
 export const IteratorReturnResultSchema = <TReturn extends TSchema>(
-  value: TReturn
+  value: TReturn,
 ) =>
   Type.Object({
     done: Type.Literal(true),
@@ -19,10 +19,10 @@ export const IteratorReturnResultSchema = <TReturn extends TSchema>(
 
 export const IteratorResultSchema = <
   T extends TSchema,
-  TReturn extends TSchema
+  TReturn extends TSchema,
 >(
   yieldValue: T,
-  returnValue: TReturn
+  returnValue: TReturn,
 ) =>
   Type.Union([
     IteratorYieldResultSchema(yieldValue),
@@ -30,26 +30,29 @@ export const IteratorResultSchema = <
   ]);
 
 export const iteratorResultChecker = TypeCompiler.Compile(
-  IteratorResultSchema(Type.Unknown(), Type.Unknown())
+  IteratorResultSchema(Type.Unknown(), Type.Unknown()),
 );
 
 export const IteratorSchema = <T extends TSchema, TReturn extends TSchema>(
   yieldValue: T,
-  returnValue: TReturn
+  returnValue: TReturn,
 ) =>
   Type.Object({
     next: Type.Function([], IteratorResultSchema(yieldValue, returnValue)),
     return: Type.Optional(
       Type.Function(
         [Type.Optional(returnValue)],
-        IteratorResultSchema(yieldValue, returnValue)
-      )
+        IteratorResultSchema(yieldValue, returnValue),
+      ),
     ),
     throw: Type.Optional(
-      Type.Function([Type.Any()], IteratorResultSchema(yieldValue, returnValue))
+      Type.Function(
+        [Type.Any()],
+        IteratorResultSchema(yieldValue, returnValue),
+      ),
     ),
   });
 
 export const iteratorChecker = TypeCompiler.Compile(
-  IteratorSchema(Type.Unknown(), Type.Unknown())
+  IteratorSchema(Type.Unknown(), Type.Unknown()),
 );
