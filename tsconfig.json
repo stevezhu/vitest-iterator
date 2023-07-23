@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "isolatedModules": true,
-    "module": "esnext",
-    "outDir": "dist/",
-    "target": "esnext",
     "strict": true,
-    "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "bundler",
+    "declaration": true,
+    "outDir": "dist/",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "target": "esnext",
     "skipLibCheck": true
   }
 }
