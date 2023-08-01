@@ -10,7 +10,7 @@ dependencies:
     version: 0.29.4
   vitest:
     specifier: '>=0.31.0'
-    version: 0.33.0(@vitest/ui@0.33.0)
+    version: 0.33.0(@vitest/ui@0.34.0)
 
 devDependencies:
   '@types/chai':
@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^0.33.0
     version: 0.33.0(vitest@0.33.0)
   '@vitest/ui':
-    specifier: ^0.33.0
-    version: 0.33.0(vitest@0.33.0)
+    specifier: ^0.34.0
+    version: 0.34.0(vitest@0.33.0)
   eslint:
     specifier: ^8.45.0
     version: 8.45.0
@@ -57,7 +57,7 @@ devDependencies:
     version: 2.4.5(prettier@3.0.0)
   prettier-plugin-tsconfig:
     specifier: github:stevezhu/prettier-plugin-tsconfig
-    version: github.com/stevezhu/prettier-plugin-tsconfig/1a0dcd66765c77705c7712b4d7b21a641f11ae49(prettier@3.0.0)
+    version: github.com/stevezhu/prettier-plugin-tsconfig/ad77f71fceec989e1c16ccd272bc7c2cea0df3b5(prettier@3.0.0)
   tsup:
     specifier: ^7.1.0
     version: 7.1.0(typescript@5.1.6)
@@ -591,7 +591,7 @@ packages:
       magic-string: 0.30.1
       picocolors: 1.0.0
       std-env: 3.3.3
-      vitest: 0.33.0(@vitest/ui@0.33.0)
+      vitest: 0.33.0(@vitest/ui@0.34.0)
     dev: true
 
   /@vitest/expect@0.33.0:
@@ -620,22 +620,29 @@ packages:
     dependencies:
       tinyspy: 2.1.1
 
-  /@vitest/ui@0.33.0(vitest@0.33.0):
-    resolution: {integrity: sha512-7gbAjLqt30R4bodkJAutdpy4ncv+u5IKTHYTow1c2q+FOxZUC9cKOSqMUxjwaaTwLN+EnDnmXYPtg3CoahaUzQ==}
+  /@vitest/ui@0.34.0(vitest@0.33.0):
+    resolution: {integrity: sha512-+MPvbOiKrOWm1JL8hfROybzTB0Y6gWbMCQZlEI67M1+a1iTjaowXTeYSN4pGu0SubeGJw0JTrZ/Z/sRLmb9wLw==}
     peerDependencies:
       vitest: '>=0.30.1 <1'
     dependencies:
-      '@vitest/utils': 0.33.0
+      '@vitest/utils': 0.34.0
       fast-glob: 3.3.0
       fflate: 0.8.0
       flatted: 3.2.7
       pathe: 1.1.1
       picocolors: 1.0.0
       sirv: 2.0.3
-      vitest: 0.33.0(@vitest/ui@0.33.0)
+      vitest: 0.33.0(@vitest/ui@0.34.0)
 
   /@vitest/utils@0.33.0:
     resolution: {integrity: sha512-pF1w22ic965sv+EN6uoePkAOTkAPWM03Ri/jXNyMIKBb/XHLDPfhLvf/Fa9g0YECevAIz56oVYXhodLvLQ/awA==}
+    dependencies:
+      diff-sequences: 29.4.3
+      loupe: 2.3.6
+      pretty-format: 29.6.1
+
+  /@vitest/utils@0.34.0:
+    resolution: {integrity: sha512-IktrDLhBKf3dEUUxH+lcHiPnaw952+GdGvoxg99liMscgP6IePf6LuMY7B9dEIHkFunB1R8VMR/wmI/4UGg1aw==}
     dependencies:
       diff-sequences: 29.4.3
       loupe: 2.3.6
@@ -3748,7 +3755,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitest@0.33.0(@vitest/ui@0.33.0):
+  /vitest@0.33.0(@vitest/ui@0.34.0):
     resolution: {integrity: sha512-1CxaugJ50xskkQ0e969R/hW47za4YXDUfWJDxip1hwbnhUjYolpfUn2AMOulqG/Dtd9WYAtkHmM/m3yKVrEejQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -3786,7 +3793,7 @@ packages:
       '@vitest/runner': 0.33.0
       '@vitest/snapshot': 0.33.0
       '@vitest/spy': 0.33.0
-      '@vitest/ui': 0.33.0(vitest@0.33.0)
+      '@vitest/ui': 0.34.0(vitest@0.33.0)
       '@vitest/utils': 0.33.0
       acorn: 8.10.0
       acorn-walk: 8.2.0
@@ -3968,9 +3975,9 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
 
-  github.com/stevezhu/prettier-plugin-tsconfig/1a0dcd66765c77705c7712b4d7b21a641f11ae49(prettier@3.0.0):
-    resolution: {tarball: https://codeload.github.com/stevezhu/prettier-plugin-tsconfig/tar.gz/1a0dcd66765c77705c7712b4d7b21a641f11ae49}
-    id: github.com/stevezhu/prettier-plugin-tsconfig/1a0dcd66765c77705c7712b4d7b21a641f11ae49
+  github.com/stevezhu/prettier-plugin-tsconfig/ad77f71fceec989e1c16ccd272bc7c2cea0df3b5(prettier@3.0.0):
+    resolution: {tarball: https://codeload.github.com/stevezhu/prettier-plugin-tsconfig/tar.gz/ad77f71fceec989e1c16ccd272bc7c2cea0df3b5}
+    id: github.com/stevezhu/prettier-plugin-tsconfig/ad77f71fceec989e1c16ccd272bc7c2cea0df3b5
     name: prettier-plugin-tsconfig
     version: 0.1.0
     engines: {node: '>=16'}
