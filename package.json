@@ -43,7 +43,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.29.4"
+    "@sinclair/typebox": "^0.30.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
