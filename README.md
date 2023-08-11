@@ -2,8 +2,6 @@
 
 Additional vitest matchers for iterators and generators.
 
-[![Depfu](https://badges.depfu.com/badges/39fc9693c70ed3fc91425c14fce1cb64/overview.svg)](https://depfu.com/github/stevezhu/vitest-iterator?project_id=37835)
-
 ## Installation
 
 Pnpm:
