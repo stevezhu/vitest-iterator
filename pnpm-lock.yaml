@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@sinclair/typebox':
-    specifier: ^0.30.4
-    version: 0.30.4
+    specifier: ^0.31.0
+    version: 0.31.0
   vitest:
     specifier: '>=0.31.0'
     version: 0.34.1(@vitest/ui@0.34.1)
@@ -60,7 +60,7 @@ devDependencies:
     version: 2.4.5(prettier@3.0.1)
   prettier-plugin-tsconfig:
     specifier: github:stevezhu/prettier-plugin-tsconfig
-    version: github.com/stevezhu/prettier-plugin-tsconfig/1e11905d1a186d5f4819347fe91ca9cfdfd6eedb(prettier@3.0.1)
+    version: github.com/stevezhu/prettier-plugin-tsconfig/0e635ee832b0faa1682441fef546027a3521a185(prettier@3.0.1)
   tsup:
     specifier: ^7.2.0
     version: 7.2.0(typescript@5.1.6)
@@ -515,8 +515,8 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  /@sinclair/typebox@0.30.4:
-    resolution: {integrity: sha512-wFuuDR+O1OAE2GL0q68h1Ty00RE6Ihcixr55A6TU5RCvOUHnwJw9LGuDVg9NxDiAp7m/YJpa+UaOuLAz0ziyOQ==}
+  /@sinclair/typebox@0.31.0:
+    resolution: {integrity: sha512-bL3KIy1cqi4wyKwJZ3szckq0k/IuLluwQ9IB8QMNS2ogHGiqkempV7uO52Tjr79oBgOnlRaOhIf5qkc8HH9KhA==}
     dev: false
 
   /@trivago/prettier-plugin-sort-imports@4.2.0(prettier@3.0.1):
@@ -4064,9 +4064,9 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
 
-  github.com/stevezhu/prettier-plugin-tsconfig/1e11905d1a186d5f4819347fe91ca9cfdfd6eedb(prettier@3.0.1):
-    resolution: {tarball: https://codeload.github.com/stevezhu/prettier-plugin-tsconfig/tar.gz/1e11905d1a186d5f4819347fe91ca9cfdfd6eedb}
-    id: github.com/stevezhu/prettier-plugin-tsconfig/1e11905d1a186d5f4819347fe91ca9cfdfd6eedb
+  github.com/stevezhu/prettier-plugin-tsconfig/0e635ee832b0faa1682441fef546027a3521a185(prettier@3.0.1):
+    resolution: {tarball: https://codeload.github.com/stevezhu/prettier-plugin-tsconfig/tar.gz/0e635ee832b0faa1682441fef546027a3521a185}
+    id: github.com/stevezhu/prettier-plugin-tsconfig/0e635ee832b0faa1682441fef546027a3521a185
     name: prettier-plugin-tsconfig
     version: 0.1.0
     engines: {node: '>=16'}
