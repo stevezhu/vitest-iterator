@@ -1,5 +1,7 @@
 # vitest-iterator
 
+[![npm version](https://badge.fury.io/js/vitest-iterator.svg)](https://badge.fury.io/js/vitest-iterator)
+
 Additional vitest matchers for iterators and generators.
 
 ## Installation
