@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@sinclair/typebox':
-    specifier: ^0.31.1
-    version: 0.31.1
+    specifier: ^0.32.0
+    version: 0.32.0
   vitest:
     specifier: '>=0.31.0'
     version: 0.34.1(@vitest/ui@1.0.0)
@@ -842,8 +842,8 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  /@sinclair/typebox@0.31.1:
-    resolution: {integrity: sha512-oAGsVU6u4k7pNGfDZG1ujFuku25yV3lFmyxZXXLylm0Pf2Qh9pgGFpGwPbyyFZl9PYH4thS9qRcfs3C2Sn3/SA==}
+  /@sinclair/typebox@0.32.0:
+    resolution: {integrity: sha512-FdBgO+ib0JCSPtq55cDva/5xd55vfAAyTXWVLCaTAFzNjVPaR5lNRKoEzMHTtArELEaHNs4E6WmdNJIY+gUoZw==}
     dev: false
 
   /@trivago/prettier-plugin-sort-imports@4.2.0(prettier@3.0.1):
