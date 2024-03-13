@@ -38,7 +38,7 @@
     "prepare": "nps build",
     "test": "nps test",
     "test:coverage": "vitest --coverage",
-    "test:typecheck": "vitest typecheck",
+    "test:typecheck": "vitest --typecheck",
     "test:ui": "vitest --ui",
     "test:watch": "vitest"
   },
