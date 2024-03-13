@@ -6,7 +6,7 @@ module.exports = {
     lint: npsUtils.concurrent.nps('prettier', 'eslint'),
     test: npsUtils.concurrent({
       test: 'vitest run',
-      'test:types': 'vitest typecheck --run',
+      'test:typecheck': 'vitest --typecheck --run',
       typecheck: 'tsc --noEmit',
     }),
     prettier: {
